@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button target-key="btn" >按钮</button>
+    <button onclick="console.log(aaaa)">按钮2</button>
+    <button onclick="Promise.reject('测试错误')">按钮3</button>
+    <script src="./dist/index.js"></script>
+    <script>
+        new tracker({
+            requestUrl:'http://localhost:3000',
+            historyTracker:true,
+            domTracker:true,
+            jsError:true,
+            hashTracker:true,
+            performanceTracker:true
+        })
+
+
+        /* let observer=new PerformanceObserver((entries,observe)=>{
+            console.log('11111',entries.getEntries())
+            observe.disconnect()
+        })
+        //lcp
+        observer.observe({
+            type:"largest-contentful-paint",
+            buffered:true
+        })
+
+        let observer1=new PerformanceObserver((entries,observe)=>{
+
+        })
+
+        observer1.observe({
+            type:"first-input",
+            buffered:true
+        })
+
+        let observer2=new PerformanceObserver((entries,observe)=>{
+
+        })
+
+        observer2.observe({
+            type:"first-input",
+            buffered:true
+        }) */
+    </script>
+</body>
+</html>
