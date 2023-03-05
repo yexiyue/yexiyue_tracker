@@ -1,16 +1,24 @@
 {
   "name": "yexiyue_tracker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "browser":"dist/index.js",
+  "browser": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c --bundleConfigAsCjs"
   },
-  "keywords": ["前端","埋点","tracker","sdk"],
-  "files": ["dist"],
+  "keywords": [
+    "前端",
+    "埋点",
+    "tracker",
+    "sdk"
+  ],
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/core/index.d.ts",
   "author": "",
   "license": "ISC",
   "devDependencies": {
