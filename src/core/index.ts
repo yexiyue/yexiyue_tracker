@@ -116,6 +116,7 @@ export default class Tracker {
         event: "error",
         targetKey: "message",
         message: ev.message,
+        filename:`${ev.filename}(${ev.lineno}行,${ev.colno}列)`,
       });
     });
   }
@@ -125,12 +126,10 @@ export default class Tracker {
     window.addEventListener("unhandledrejection", (ev) => {
         ev.preventDefault()
       ev.promise.catch((error) => {
-        console.log(ev)
         this.reportTracker({
           event: "promiseError",
           targetKey: "message",
           message: error,
-          filename:`${error.filename}(${error.lineno}行,${error.colno}列)`,
         });
       });
     });

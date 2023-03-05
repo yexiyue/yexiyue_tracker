@@ -3,9 +3,10 @@
  * @historyTracker history上报
  * @hashTracker hash上报
  * @domTracker 携带Tracker-key 点击事件上报
- * @sdkVersionsdk版本
- * @extra透传字段
+ * @sdkVersionsdk 版本
+ * @extra 透传字段
  * @jsError js 和 promise 报错异常上报
+ * @performanceTracker 性能上报
  */
 export interface DefaultOptions {
     uuid: string | undefined;

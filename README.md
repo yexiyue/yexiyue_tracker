@@ -13,3 +13,53 @@
 3. dom事件上报
 4. history和hash页面路由跳转上报
 5. performance上报
+
+
+
+## 使用说明
+
+```typescript
+/**
+ * @requestUrl 接口地址
+ * @historyTracker history上报
+ * @hashTracker hash上报
+ * @domTracker 携带Tracker-key 点击事件上报
+ * @sdkVersionsdk 版本
+ * @extra 透传字段
+ * @jsError js 和 promise 报错异常上报
+ * @performanceTracker 性能上报
+ */
+
+import Tracker from 'yexiyue_tracker'
+
+new Tracker({
+  requestUrl:'http://localhost:3000',
+  hashTracker:true,
+  jsError:true,
+  performanceTracker:true
+})
+```
+
+
+
+## 后端接受数据
+
+**以下是nest.js示例**
+
+```typescript
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { AppService } from './app.service';
+
+@Controller()
+export class AppController {
+  constructor(private readonly appService: AppService) {}
+
+
+  @Post()
+  getTracker(@Body() body: any) {
+    console.log(JSON.parse(Object.keys(body)[0]));
+    return 'ok';
+  }
+}
+```
+

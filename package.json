@@ -1,7 +1,7 @@
 {
   "name": "yexiyue_tracker",
-  "version": "1.0.6",
-  "description": "",
+  "version": "1.0.7",
+  "description": "一个埋点sdk，可满足基本的上报功能",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.js",
@@ -19,7 +19,7 @@
     "dist"
   ],
   "types": "./dist/core/index.d.ts",
-  "author": "",
+  "author": "yexiyue666",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.21.0",
