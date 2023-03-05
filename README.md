@@ -40,6 +40,12 @@ new Tracker({
 })
 ```
 
+**使用domTracker时，需要为该dom添加自定义属性target-key**
+
+```html
+<button target-key="btn" >按钮</button>
+```
+
 
 
 ## 后端接受数据
@@ -61,5 +67,22 @@ export class AppController {
     return 'ok';
   }
 }
+
+/** 打印结果
+{
+  historyTracker: true,
+  hashTracker: false,
+  domTracker: true,
+  jsError: true,
+  sdkVersion: '1.0.0',
+  performanceTracker: true,
+  uuid: 'e157e6e9',
+  requestUrl: '/sdk',
+  event: 'pushState',
+  targetKey: 'history-pv',
+  time: 1678017692980,
+  pageName: '/#/news/8'
+}
+*/
 ```
 
