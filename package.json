@@ -1,6 +1,6 @@
 {
   "name": "yexiyue_tracker",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "一个埋点sdk，可满足基本的上报功能",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
