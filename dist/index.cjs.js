@@ -55,8 +55,8 @@ class Tracker {
     constructor(options) {
         this.ReportCallback = (metric) => {
             this.reportTracker({
-                event: "performance",
-                targetKey: metric.name,
+                event: metric.name,
+                targetKey: "performance",
                 value: metric.value,
                 rating: metric.rating,
             });
